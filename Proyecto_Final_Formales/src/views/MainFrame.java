@@ -15,7 +15,7 @@ public class MainFrame extends JFrame {
         setTitle(TITLE);
         setSize(200,400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        getContentPane().setLayout(new GridLayout(2,1));
+        getContentPane().setLayout(new GridLayout(3,1));
         addButtons(listener);
     }
 
@@ -33,5 +33,10 @@ public class MainFrame extends JFrame {
         btnPda.setActionCommand(Actions.PDA.toString());
         btnPda.addActionListener(listener);
         add(btnPda);
+        
+        JButton btnGramReg = new JButton("Gramaticas Regulares");
+        btnGramReg.setActionCommand(Actions.REGULAR_GRAMMAR.toString());
+        btnGramReg.addActionListener(listener);
+        add(btnGramReg);
     }
 }

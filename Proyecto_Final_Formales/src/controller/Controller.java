@@ -25,6 +25,10 @@ public class Controller implements ActionListener {
             case PDA:
                 initPda();
                 break;
+                
+            case REGULAR_GRAMMAR:
+            	initRegularGrammar();
+            	break;
         }
     }
 
@@ -34,6 +38,10 @@ public class Controller implements ActionListener {
 
     private void initRegularExpressions(){
         new REController();
+    }
+    
+    private void initRegularGrammar() {
+    	new modules.RegularGrammar.controller.Controller();
     }
 
     public static void main(String[] args) {
