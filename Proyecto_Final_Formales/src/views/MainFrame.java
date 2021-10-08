@@ -13,9 +13,9 @@ public class MainFrame extends JFrame {
 
     public MainFrame(ActionListener listener){
         setTitle(TITLE);
-        setSize(200,400);
+        setSize(600,600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        getContentPane().setLayout(new GridLayout(3,1));
+        getContentPane().setLayout(new GridLayout(4,1));
         addButtons(listener);
     }
 
@@ -38,5 +38,10 @@ public class MainFrame extends JFrame {
         btnGramReg.setActionCommand(Actions.REGULAR_GRAMMAR.toString());
         btnGramReg.addActionListener(listener);
         add(btnGramReg);
+
+        JButton btnDfa = new JButton("Automata finito determinista");
+        btnDfa.setActionCommand(Actions.DFA.toString());
+        btnDfa.addActionListener(listener);
+        add(btnDfa);
     }
 }

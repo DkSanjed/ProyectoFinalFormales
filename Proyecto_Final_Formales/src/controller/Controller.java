@@ -1,5 +1,6 @@
 package controller;
 
+import modules.DFA.controller.DFAController;
 import modules.expresiones_regulares.src.controllers.REController;
 import modules.pda.runner.RunPDA;
 import views.MainFrame;
@@ -29,6 +30,10 @@ public class Controller implements ActionListener {
             case REGULAR_GRAMMAR:
             	initRegularGrammar();
             	break;
+
+            case DFA:
+                new DFAController();
+                break;
         }
     }
 
